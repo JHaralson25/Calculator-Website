@@ -1,0 +1,30 @@
+.grid{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "bar bar bar bar"
+    "add subtract mult divide"
+    ". . . enter";
+    justify-items: center;
+    justify-self: center;
+    row-gap: 20px;
+}
+.bar{
+    grid-area: bar;
+}
+.add{
+    grid-area: add;
+}
+.subtract{
+    grid-area: subtract;
+}
+.mult{
+    grid-area: mult;
+}
+.divide{
+    grid-area: divide;
+}
+.enter{
+    grid-area: enter;
+}
