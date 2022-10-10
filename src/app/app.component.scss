@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .grid{
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
@@ -13,6 +17,11 @@
     justify-items: center;
     justify-self: center;
     row-gap: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 .clear{
     grid-area: clear;

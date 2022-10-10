@@ -94,7 +94,6 @@ export class AppComponent {
  
   getAnswer() {
     this.calcAnswer();
-    this.input = this.result;
     if (this.input=="0") this.input="";
   }
  
