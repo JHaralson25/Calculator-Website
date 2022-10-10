@@ -4,14 +4,60 @@
     grid-template-rows: auto;
     grid-template-areas: 
     "bar bar bar bar"
-    "add subtract mult divide"
-    ". . . enter";
+    "result result result result"
+    "clear clear remove divide"
+    "seven eight nine mult"
+    "four five six subtract"
+    "one two three add"
+    "decimal zero enter enter";
     justify-items: center;
     justify-self: center;
     row-gap: 20px;
 }
+.clear{
+    grid-area: clear;
+}
+.remove{
+    grid-area: remove;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.decimal{
+    grid-area: decimal;
+}
+.zero{
+    grid-area: zero;
+}
 .bar{
     grid-area: bar;
+}
+.result{
+    grid-area: result;
 }
 .add{
     grid-area: add;

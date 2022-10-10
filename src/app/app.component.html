@@ -1,8 +1,24 @@
 <div class="grid">
-  <div class="bar"><input type="text" id="name" name="name"></div>
-  <div class="enter">=</div>
-  <div class="add"><button mat-raised-button>+</button></div>
-  <div class="subtract">-</div>
-  <div class="divide">/</div>
-  <div class="mult">x</div>
+  <div class="bar">{{input}}</div>
+  <div class = "result">{{result}}</div>
+  <div class="enter"><button mat-raised-button (click)="getAnswer()">=</button></div>
+  <div class="add"><button mat-raised-button (click)="pressOperator('+')">+</button></div>
+  <div class="subtract"><button mat-raised-button (click)="pressOperator('-')">-</button></div>
+  <div class="divide"><button mat-raised-button (click)="pressOperator('/')">/</button></div>
+  <div class="mult"><button mat-raised-button (click)="pressOperator('*')">x</button></div>
+  <div class="clear"><button mat-raised-button (click)="allClear()">C</button></div>
+  <div class="remove"><button mat-raised-button (click)="clear()">Del</button></div>
+  <div class="nine"><button mat-raised-button (click)="pressNum('9')">9</button></div>
+  <div class="eight"><button mat-raised-button (click)="pressNum('8')">8</button></div>
+  <div class="seven"><button mat-raised-button (click)="pressNum('7')">7</button></div>
+  <div class="six"><button mat-raised-button (click)="pressNum('6')">6</button></div>
+  <div class="five"><button mat-raised-button (click)="pressNum('5')">5</button></div>
+  <div class="four"><button mat-raised-button (click)="pressNum('4')">4</button></div>
+  <div class="three"><button mat-raised-button (click)="pressNum('3')">3</button></div>
+  <div class="two"><button mat-raised-button (click)="pressNum('2')">2</button></div>
+  <div class="one"><button mat-raised-button (click)="pressNum('1')">1</button></div>
+  <div class="zero"><button mat-raised-button (click)="pressNum('0')">0</button></div>
+  <div class="decimal"><button mat-raised-button (click)="pressNum('.')">.</button></div>
+  <div>
+  </div>
 </div>
