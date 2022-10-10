@@ -35,7 +35,6 @@ export class AppComponent {
     }
  
     this.input = this.input + num
-    this.calcAnswer();
   }
  
  
@@ -60,7 +59,6 @@ export class AppComponent {
     }
    
     this.input = this.input + op
-    this.calcAnswer();
   }
  
  
