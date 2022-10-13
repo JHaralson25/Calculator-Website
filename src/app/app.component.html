@@ -1,26 +1,40 @@
-<div class="container">
-<div class="grid">
-  <div class="bar">{{input}}</div>
-  <div class="result">{{result}}</div>
-  <div class="enter"><button mat-raised-button (click)="getAnswer()">=</button></div>
-  <div class="add"><button mat-raised-button (click)="pressOperator('+')">+</button></div>
-  <div class="subtract"><button mat-raised-button (click)="pressOperator('-')">-</button></div>
-  <div class="divide"><button mat-raised-button (click)="pressOperator('/')">/</button></div>
-  <div class="mult"><button mat-raised-button (click)="pressOperator('*')">x</button></div>
-  <div class="clear"><button mat-raised-button (click)="allClear()">C</button></div>
-  <div class="remove"><button mat-raised-button (click)="clear()">Del</button></div>
-  <div class="nine"><button mat-raised-button (click)="pressNum('9')">9</button></div>
-  <div class="eight"><button mat-raised-button (click)="pressNum('8')">8</button></div>
-  <div class="seven"><button mat-raised-button (click)="pressNum('7')">7</button></div>
-  <div class="six"><button mat-raised-button (click)="pressNum('6')">6</button></div>
-  <div class="five"><button mat-raised-button (click)="pressNum('5')">5</button></div>
-  <div class="four"><button mat-raised-button (click)="pressNum('4')">4</button></div>
-  <div class="three"><button mat-raised-button (click)="pressNum('3')">3</button></div>
-  <div class="two"><button mat-raised-button (click)="pressNum('2')">2</button></div>
-  <div class="one"><button mat-raised-button (click)="pressNum('1')">1</button></div>
-  <div class="zero"><button mat-raised-button (click)="pressNum('0')">0</button></div>
-  <div class="decimal"><button mat-raised-button (click)="pressNum('.')">.</button></div>
-  <div>
+<div class="container-fluid">
+  <h1>Calculator Web App</h1><small> By Jacob Haralson</small> 
+  <div class="row">
+    <input class="form-control text-right" type="text" placeholder="{{input}}" readonly>
   </div>
-</div>
+  <div class="row">
+    <input class="form-control text-right" type="text" placeholder="{{result}}" readonly>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-danger col-sm-6" (click)="allClear()">Clear</button>
+    <button type="button" class="btn btn-warning col-sm-3" (click)="clear()">Delete</button>
+    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('/')">/</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('7')">7</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('8')">8</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('9')">9</button>
+    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('*')">x</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('4')">4</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('5')">5</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('6')">6</button>
+    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('-')">-</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('1')">1</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('2')">2</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('3')">3</button>
+    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('+')">+</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('.')">.</button>
+    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('0')">0</button>
+    <button type="button" class="btn btn-success col-sm-6" (click)="getAnswer()">Enter</button>
+  </div>
+  <p>
+    Constructed in Angular and styled using Bootstrap 5. Please feel free to check out the rest of my GitHub repo and leave any comments!
+  </p>
 </div>
