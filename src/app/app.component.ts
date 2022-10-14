@@ -46,8 +46,8 @@ export class AppComponent {
     if (this.input.toString().lastIndexOf("*") > pos) pos=this.input.lastIndexOf("*")
     if (this.input.toString().lastIndexOf("/") > pos) pos=this.input.lastIndexOf("/")
     if (this.input.toString().lastIndexOf('%') > pos) pos=this.input.lastIndexOf('%')
-    console.log('Last '+this.input.substr(pos+1));
-    return this.input.substr(pos+1);
+    console.log('Last '+this.input.substring(pos+1));
+    return this.input.substring(pos+1);
   }
  
  
@@ -65,7 +65,7 @@ export class AppComponent {
  
   clear() {
     if (this.input !="" ) {
-      this.input=this.input.substr(0, this.input.length-1);
+      this.input=this.input.substring(0, this.input.length-1);
     }
   }
  
@@ -80,13 +80,13 @@ export class AppComponent {
     let lastKey = formula[formula.length - 1];
  
     if (lastKey === '.')  {
-      formula=formula.substr(0,formula.length - 1);
+      formula=formula.substring(0,formula.length - 1);
     }
  
     lastKey = formula[formula.length - 1];
  
     if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+' || lastKey === '.' || lastKey === '%')  {
-      formula=formula.substr(0,formula.length - 1);
+      formula=formula.substring(0,formula.length - 1);
     }
  
     console.log("Formula " +formula);
@@ -95,7 +95,6 @@ export class AppComponent {
  
   getAnswer() {
     this.calcAnswer();
-    if (this.input=="0") this.input="";
   }
  
 }
