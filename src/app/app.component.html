@@ -9,29 +9,34 @@
   <div class="row">
     <button type="button" class="btn btn-danger col-sm-6" (click)="allClear()">Clear</button>
     <button type="button" class="btn btn-warning col-sm-3" (click)="clear()">Delete</button>
-    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('/')">/</button>
+    <button type="button" class="btn btn-info col-sm-3 btn-outline-secondary" (click)="pressOperator('/')">/</button>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('7')">7</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('8')">8</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('9')">9</button>
-    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('*')">x</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('7')">7</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('8')">8</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('9')">9</button>
+    <button type="button" class="btn btn-info col-sm-3 btn-outline-secondary" (click)="pressOperator('*')">x</button>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('4')">4</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('5')">5</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('6')">6</button>
-    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('-')">-</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('4')">4</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('5')">5</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('6')">6</button>
+    <button type="button" class="btn btn-info col-sm-3 btn-outline-secondary" (click)="pressOperator('-')">-</button>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('1')">1</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('2')">2</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('3')">3</button>
-    <button type="button" class="btn btn-info col-sm-3 active" (click)="pressOperator('+')">+</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('1')">1</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('2')">2</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('3')">3</button>
+    <button type="button" class="btn btn-info col-sm-3 btn-outline-secondary" (click)="pressOperator('+')">+</button>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('.')">.</button>
-    <button type="button" class="btn btn-defualt col-sm-3 active" (click)="pressNum('0')">0</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('.')">.</button>
+    <button type="button" class="btn btn-outline-dark col-sm-3" (click)="pressNum('0')">0</button>
+    <div class="col-sm-3"></div>
+    <button type="button" class="btn btn-info col-sm-3 btn-outline-secondary" (click)="pressOperator('%')">%</button>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"></div>
     <button type="button" class="btn btn-success col-sm-6" (click)="getAnswer()">Enter</button>
   </div>
   <p>

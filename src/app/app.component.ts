@@ -14,10 +14,10 @@ export class AppComponent {
     
     //Do Not Allow . more than once
     if (num==".") {
-      if (this.input !="" ) {
+      if (this.input !="") {
  
-        const lastNum=this.getLastOperand()
-        console.log(lastNum.lastIndexOf("."))
+        const lastNum=this.getLastOperand();
+        console.log(lastNum.lastIndexOf("."));
         if (lastNum.lastIndexOf(".") >= 0) return;
       }
     }
@@ -29,24 +29,25 @@ export class AppComponent {
         return;
       }
       const PrevKey = this.input[this.input.length - 1];
-      if (PrevKey === '/' || PrevKey === '*' || PrevKey === '-' || PrevKey === '+')  {
+      if (PrevKey === '/' || PrevKey === '*' || PrevKey === '-' || PrevKey === '+' || PrevKey === '%')  {
           return;
       }
     }
  
-    this.input = this.input + num
+    this.input = this.input + num;
   }
  
  
   getLastOperand() {
     let pos:number;
-    console.log(this.input)
-    pos=this.input.toString().lastIndexOf("+")
+    console.log(this.input);
+    pos=this.input.toString().lastIndexOf("+");
     if (this.input.toString().lastIndexOf("-") > pos) pos=this.input.lastIndexOf("-")
     if (this.input.toString().lastIndexOf("*") > pos) pos=this.input.lastIndexOf("*")
     if (this.input.toString().lastIndexOf("/") > pos) pos=this.input.lastIndexOf("/")
-    console.log('Last '+this.input.substr(pos+1))
-    return this.input.substr(pos+1)
+    if (this.input.toString().lastIndexOf('%') > pos) pos=this.input.lastIndexOf('%')
+    console.log('Last '+this.input.substr(pos+1));
+    return this.input.substr(pos+1);
   }
  
  
@@ -54,17 +55,17 @@ export class AppComponent {
  
     //Do not allow operators more than once
     const lastKey = this.input[this.input.length - 1];
-    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+')  {
+    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+' || lastKey === '%')  {
       return;
     }
    
-    this.input = this.input + op
+    this.input = this.input + op;
   }
  
  
   clear() {
     if (this.input !="" ) {
-      this.input=this.input.substr(0, this.input.length-1)
+      this.input=this.input.substr(0, this.input.length-1);
     }
   }
  
@@ -84,7 +85,7 @@ export class AppComponent {
  
     lastKey = formula[formula.length - 1];
  
-    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+' || lastKey === '.')  {
+    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+' || lastKey === '.' || lastKey === '%')  {
       formula=formula.substr(0,formula.length - 1);
     }
  
